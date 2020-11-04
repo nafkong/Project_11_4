@@ -20,7 +20,14 @@ int main()
 {
 	srcMat = imread("C:/Users/admin/Desktop/messi.jpg");
 	cvtColor(srcMat, gryMat, CV_BGR2GRAY);
-	createTrackbar("edgeThresh", window_name, &edgeThresh, 255, onTrackbar);
+	imshow(window_name, gryMat);
+//	imshow(window_name, dstMat);
+	createTrackbar("edgeThresh", 
+					window_name,
+					&edgeThresh,
+					255, 
+					onTrackbar);
+	
 	waitKey(0);
 
 	return 0;
